@@ -17,6 +17,7 @@
             <a href="#fdGroup" class="nav-item" @click.prevent="scrollToSection('fdGroup')">FD小组</a>
             <a href="#blueZoneStrategy" class="nav-item" @click.prevent="scrollToSection('blueZoneStrategy')">蓝区战略</a>
             <a href="#serviceDomainSpecial" class="nav-item" @click.prevent="scrollToSection('serviceDomainSpecial')">服务域专项</a>
+            <a href="#capacityBuilding" class="nav-item" @click.prevent="scrollToSection('capacityBuilding')">能力构建</a>
             <a href="#industryNews" class="nav-item" @click.prevent="scrollToSection('industryNews')">业界资讯</a>
             <!-- <button class="menu-btn">MENU</button> -->
           </div>
@@ -224,146 +225,306 @@
               </div>
             </section>
 
-            <!-- Service Domain Special Section -->
-            <section v-else-if="type === 'serviceDomainSpecial'" :id="type" class="content-section fade-in-up" :style="{ animationDelay: `${Math.random() * 0.5}s` }">
-              <div class="section-header">
-                <div class="section-title-wrapper">
-                  <h2 class="section-title">{{ formatTitle(type) }}</h2>
-                </div>
+          <!-- Service Domain Special Section -->
+          <section v-else-if="type === 'serviceDomainSpecial'" :id="type" class="content-section fade-in-up" :style="{ animationDelay: `${Math.random() * 0.5}s` }">
+            <div class="section-header">
+              <div class="section-title-wrapper">
+                <h2 class="section-title">{{ formatTitle(type) }}</h2>
               </div>
-              
-              <div class="card-grid fd-grid">
-                <!-- GaussDB -->
-                <div class="card fd-card">
-                  <div class="card-content fd-card-content">
-                    <div class="fd-card-header">
-                      <h3 class="fd-card-title">GaussDB</h3>
-                    </div>
-                    <div class="fd-sub-section">
-                      <h4 class="fd-sub-title">AI辅助兼容性专项</h4>
-                      <p class="fd-text">进展描述示例文本，可以在这里填写具体的进展情况。</p>
-                    </div>
-                    <div class="fd-sub-section">
-                      <h4 class="fd-sub-title">锁资源检查专项</h4>
-                      <p class="fd-text">进展描述示例文本，可以在这里填写具体的进展情况。</p>
-                    </div>
-                    <div class="fd-sub-section">
-                      <h4 class="fd-sub-title">AI辅助定位SQL报错问题</h4>
-                      <p class="fd-text">进展描述示例文本，可以在这里填写具体的进展情况。</p>
-                    </div>
-                    <div class="fd-sub-section">
-                      <h4 class="fd-sub-title">AI辅助质量加固</h4>
-                      <p class="fd-text">进展描述示例文本，可以在这里填写具体的进展情况。</p>
-                    </div>
-                    <div class="fd-sub-section">
-                      <h4 class="fd-sub-title">AI辅助白盒用例生成</h4>
-                      <p class="fd-text">进展描述示例文本，可以在这里填写具体的进展情况。</p>
-                    </div>
+            </div>
+            
+            <div class="card-grid fd-grid">
+              <!-- GaussDB -->
+              <div class="card fd-card">
+                <div class="card-content fd-card-content">
+                  <div class="fd-card-header">
+                    <h3 class="fd-card-title">GaussDB</h3>
                   </div>
-                </div>
-
-                <!-- TaurusDB和RDS -->
-                <div class="card fd-card">
-                  <div class="card-content fd-card-content">
-                    <div class="fd-card-header">
-                      <h3 class="fd-card-title">TaurusDB和RDS</h3>
-                    </div>
-                    <div class="fd-sub-section">
-                      <h4 class="fd-sub-title">Taurus8041升级</h4>
-                      <p class="fd-text">进展描述示例文本，可以在这里填写具体的进展情况。</p>
-                    </div>
-                    <div class="fd-sub-section">
-                      <h4 class="fd-sub-title">现网问题辅助定位</h4>
-                      <p class="fd-text">进展描述示例文本，可以在这里填写具体的进展情况。</p>
-                    </div>
-                    <div class="fd-sub-section">
-                      <h4 class="fd-sub-title">CodeWIKI协助文档设计</h4>
-                      <p class="fd-text">进展描述示例文本，可以在这里填写具体的进展情况。</p>
-                    </div>
-                    <div class="fd-sub-section">
-                      <h4 class="fd-sub-title">代码检视Prompt增强</h4>
-                      <p class="fd-text">进展描述示例文本，可以在这里填写具体的进展情况。</p>
-                    </div>
-                    <div class="fd-sub-section">
-                      <h4 class="fd-sub-title">RDS服务MCP化</h4>
-                      <p class="fd-text">进展描述示例文本，可以在这里填写具体的进展情况。</p>
-                    </div>
-                    <div class="fd-sub-section">
-                      <h4 class="fd-sub-title">SDD推广和需求试点</h4>
-                      <p class="fd-text">进展描述示例文本，可以在这里填写具体的进展情况。</p>
-                    </div>
+                  <div class="fd-sub-section">
+                    <h4 class="fd-sub-title">AI辅助兼容性专项</h4>
+                    <p class="fd-text">进展描述示例文本，可以在这里填写具体的进展情况。</p>
                   </div>
-                </div>
-
-                <!-- GeminiDB -->
-                <div class="card fd-card">
-                  <div class="card-content fd-card-content">
-                    <div class="fd-card-header">
-                      <h3 class="fd-card-title">GeminiDB</h3>
-                    </div>
-                    <div class="fd-sub-section">
-                      <h4 class="fd-sub-title">子专项示例 1</h4>
-                      <p class="fd-text">进展描述示例文本，可以在这里填写具体的进展情况。</p>
-                    </div>
-                    <div class="fd-sub-section">
-                      <h4 class="fd-sub-title">子专项示例 2</h4>
-                      <p class="fd-text">进展描述示例文本，可以在这里填写具体的进展情况。</p>
-                    </div>
+                  <div class="fd-sub-section">
+                    <h4 class="fd-sub-title">锁资源检查专项</h4>
+                    <p class="fd-text">进展描述示例文本，可以在这里填写具体的进展情况。</p>
                   </div>
-                </div>
-
-                <!-- 管控和迁移 -->
-                <div class="card fd-card">
-                  <div class="card-content fd-card-content">
-                    <div class="fd-card-header">
-                      <h3 class="fd-card-title">管控和迁移</h3>
-                    </div>
-                    <div class="fd-sub-section">
-                      <h4 class="fd-sub-title">子专项示例 1</h4>
-                      <p class="fd-text">进展描述示例文本，可以在这里填写具体的进展情况。</p>
-                    </div>
-                    <div class="fd-sub-section">
-                      <h4 class="fd-sub-title">子专项示例 2</h4>
-                      <p class="fd-text">进展描述示例文本，可以在这里填写具体的进展情况。</p>
-                    </div>
+                  <div class="fd-sub-section">
+                    <h4 class="fd-sub-title">AI辅助定位SQL报错问题</h4>
+                    <p class="fd-text">进展描述示例文本，可以在这里填写具体的进展情况。</p>
                   </div>
-                </div>
-
-                <!-- 云原生引擎 -->
-                <div class="card fd-card">
-                  <div class="card-content fd-card-content">
-                    <div class="fd-card-header">
-                      <h3 class="fd-card-title">云原生引擎</h3>
-                    </div>
-                    <div class="fd-sub-section">
-                      <h4 class="fd-sub-title">子专项示例 1</h4>
-                      <p class="fd-text">进展描述示例文本，可以在这里填写具体的进展情况。</p>
-                    </div>
-                    <div class="fd-sub-section">
-                      <h4 class="fd-sub-title">子专项示例 2</h4>
-                      <p class="fd-text">进展描述示例文本，可以在这里填写具体的进展情况。</p>
-                    </div>
+                  <div class="fd-sub-section">
+                    <h4 class="fd-sub-title">AI辅助质量加固</h4>
+                    <p class="fd-text">进展描述示例文本，可以在这里填写具体的进展情况。</p>
                   </div>
-                </div>
-
-                <!-- 测试 -->
-                <div class="card fd-card">
-                  <div class="card-content fd-card-content">
-                    <div class="fd-card-header">
-                      <h3 class="fd-card-title">测试</h3>
-                    </div>
-                    <div class="fd-sub-section">
-                      <h4 class="fd-sub-title">子专项示例 1</h4>
-                      <p class="fd-text">进展描述示例文本，可以在这里填写具体的进展情况。</p>
-                    </div>
-                    <div class="fd-sub-section">
-                      <h4 class="fd-sub-title">子专项示例 2</h4>
-                      <p class="fd-text">进展描述示例文本，可以在这里填写具体的进展情况。</p>
-                    </div>
+                  <div class="fd-sub-section">
+                    <h4 class="fd-sub-title">AI辅助白盒用例生成</h4>
+                    <p class="fd-text">进展描述示例文本，可以在这里填写具体的进展情况。</p>
                   </div>
                 </div>
               </div>
-            </section>
+
+              <!-- TaurusDB和RDS -->
+              <div class="card fd-card">
+                <div class="card-content fd-card-content">
+                  <div class="fd-card-header">
+                    <h3 class="fd-card-title">TaurusDB和RDS</h3>
+                  </div>
+                  <div class="fd-sub-section">
+                    <h4 class="fd-sub-title">Taurus8041升级</h4>
+                    <p class="fd-text">进展描述示例文本，可以在这里填写具体的进展情况。</p>
+                  </div>
+                  <div class="fd-sub-section">
+                    <h4 class="fd-sub-title">现网问题辅助定位</h4>
+                    <p class="fd-text">进展描述示例文本，可以在这里填写具体的进展情况。</p>
+                  </div>
+                  <div class="fd-sub-section">
+                    <h4 class="fd-sub-title">CodeWIKI协助文档设计</h4>
+                    <p class="fd-text">进展描述示例文本，可以在这里填写具体的进展情况。</p>
+                  </div>
+                  <div class="fd-sub-section">
+                    <h4 class="fd-sub-title">代码检视Prompt增强</h4>
+                    <p class="fd-text">进展描述示例文本，可以在这里填写具体的进展情况。</p>
+                  </div>
+                  <div class="fd-sub-section">
+                    <h4 class="fd-sub-title">RDS服务MCP化</h4>
+                    <p class="fd-text">进展描述示例文本，可以在这里填写具体的进展情况。</p>
+                  </div>
+                  <div class="fd-sub-section">
+                    <h4 class="fd-sub-title">SDD推广和需求试点</h4>
+                    <p class="fd-text">进展描述示例文本，可以在这里填写具体的进展情况。</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- GeminiDB -->
+              <div class="card fd-card">
+                <div class="card-content fd-card-content">
+                  <div class="fd-card-header">
+                    <h3 class="fd-card-title">GeminiDB</h3>
+                  </div>
+                  <div class="fd-sub-section">
+                    <h4 class="fd-sub-title">子专项示例 1</h4>
+                    <p class="fd-text">进展描述示例文本，可以在这里填写具体的进展情况。</p>
+                  </div>
+                  <div class="fd-sub-section">
+                    <h4 class="fd-sub-title">子专项示例 2</h4>
+                    <p class="fd-text">进展描述示例文本，可以在这里填写具体的进展情况。</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 管控和迁移 -->
+              <div class="card fd-card">
+                <div class="card-content fd-card-content">
+                  <div class="fd-card-header">
+                    <h3 class="fd-card-title">管控和迁移</h3>
+                  </div>
+                  <div class="fd-sub-section">
+                    <h4 class="fd-sub-title">子专项示例 1</h4>
+                    <p class="fd-text">进展描述示例文本，可以在这里填写具体的进展情况。</p>
+                  </div>
+                  <div class="fd-sub-section">
+                    <h4 class="fd-sub-title">子专项示例 2</h4>
+                    <p class="fd-text">进展描述示例文本，可以在这里填写具体的进展情况。</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 云原生引擎 -->
+              <div class="card fd-card">
+                <div class="card-content fd-card-content">
+                  <div class="fd-card-header">
+                    <h3 class="fd-card-title">云原生引擎</h3>
+                  </div>
+                  <div class="fd-sub-section">
+                    <h4 class="fd-sub-title">子专项示例 1</h4>
+                    <p class="fd-text">进展描述示例文本，可以在这里填写具体的进展情况。</p>
+                  </div>
+                  <div class="fd-sub-section">
+                    <h4 class="fd-sub-title">子专项示例 2</h4>
+                    <p class="fd-text">进展描述示例文本，可以在这里填写具体的进展情况。</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 测试 -->
+              <div class="card fd-card">
+                <div class="card-content fd-card-content">
+                  <div class="fd-card-header">
+                    <h3 class="fd-card-title">测试</h3>
+                  </div>
+                  <div class="fd-sub-section">
+                    <h4 class="fd-sub-title">子专项示例 1</h4>
+                    <p class="fd-text">进展描述示例文本，可以在这里填写具体的进展情况。</p>
+                  </div>
+                  <div class="fd-sub-section">
+                    <h4 class="fd-sub-title">子专项示例 2</h4>
+                    <p class="fd-text">进展描述示例文本，可以在这里填写具体的进展情况。</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Capacity Building Section -->
+          <section v-else-if="type === 'capacityBuilding'" :id="type" class="content-section fade-in-up" :style="{ animationDelay: `${Math.random() * 0.5}s` }">
+            <div class="section-header">
+              <div class="section-title-wrapper">
+                <h2 class="section-title">{{ formatTitle(type) }}</h2>
+                <p class="section-subtitle">部门和各服务域培训赋能</p>
+              </div>
+            </div>
+            
+            <div class="card-grid fd-grid">
+              <!-- GaussDB -->
+              <div class="card fd-card">
+                <div class="card-content fd-card-content">
+                  <div class="fd-card-header">
+                    <h3 class="fd-card-title">GaussDB</h3>
+                  </div>
+                  <div class="fd-sub-section">
+                    <h4 class="fd-sub-title">AI辅助兼容性专项</h4>
+                    <p class="fd-text">进展描述示例文本，可以在这里填写具体的进展情况。</p>
+                  </div>
+                  <div class="fd-sub-section">
+                    <h4 class="fd-sub-title">锁资源检查专项</h4>
+                    <p class="fd-text">进展描述示例文本，可以在这里填写具体的进展情况。</p>
+                  </div>
+                  <div class="fd-sub-section">
+                    <h4 class="fd-sub-title">AI辅助定位SQL报错问题</h4>
+                    <p class="fd-text">进展描述示例文本，可以在这里填写具体的进展情况。</p>
+                  </div>
+                  <div class="fd-sub-section">
+                    <h4 class="fd-sub-title">AI辅助质量加固</h4>
+                    <p class="fd-text">进展描述示例文本，可以在这里填写具体的进展情况。</p>
+                  </div>
+                  <div class="fd-sub-section">
+                    <h4 class="fd-sub-title">AI辅助白盒用例生成</h4>
+                    <p class="fd-text">进展描述示例文本，可以在这里填写具体的进展情况。</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- TaurusDB和RDS -->
+              <div class="card fd-card">
+                <div class="card-content fd-card-content">
+                  <div class="fd-card-header">
+                    <h3 class="fd-card-title">TaurusDB和RDS</h3>
+                  </div>
+                  <div class="fd-sub-section">
+                    <h4 class="fd-sub-title">Taurus8041升级</h4>
+                    <p class="fd-text">进展描述示例文本，可以在这里填写具体的进展情况。</p>
+                  </div>
+                  <div class="fd-sub-section">
+                    <h4 class="fd-sub-title">现网问题辅助定位</h4>
+                    <p class="fd-text">进展描述示例文本，可以在这里填写具体的进展情况。</p>
+                  </div>
+                  <div class="fd-sub-section">
+                    <h4 class="fd-sub-title">CodeWIKI协助文档设计</h4>
+                    <p class="fd-text">进展描述示例文本，可以在这里填写具体的进展情况。</p>
+                  </div>
+                  <div class="fd-sub-section">
+                    <h4 class="fd-sub-title">代码检视Prompt增强</h4>
+                    <p class="fd-text">进展描述示例文本，可以在这里填写具体的进展情况。</p>
+                  </div>
+                  <div class="fd-sub-section">
+                    <h4 class="fd-sub-title">RDS服务MCP化</h4>
+                    <p class="fd-text">进展描述示例文本，可以在这里填写具体的进展情况。</p>
+                  </div>
+                  <div class="fd-sub-section">
+                    <h4 class="fd-sub-title">SDD推广和需求试点</h4>
+                    <p class="fd-text">进展描述示例文本，可以在这里填写具体的进展情况。</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- GeminiDB -->
+              <div class="card fd-card">
+                <div class="card-content fd-card-content">
+                  <div class="fd-card-header">
+                    <h3 class="fd-card-title">GeminiDB</h3>
+                  </div>
+                  <div class="fd-sub-section">
+                    <h4 class="fd-sub-title">子专项示例 1</h4>
+                    <p class="fd-text">进展描述示例文本，可以在这里填写具体的进展情况。</p>
+                  </div>
+                  <div class="fd-sub-section">
+                    <h4 class="fd-sub-title">子专项示例 2</h4>
+                    <p class="fd-text">进展描述示例文本，可以在这里填写具体的进展情况。</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 管控和迁移 -->
+              <div class="card fd-card">
+                <div class="card-content fd-card-content">
+                  <div class="fd-card-header">
+                    <h3 class="fd-card-title">管控和迁移</h3>
+                  </div>
+                  <div class="fd-sub-section">
+                    <h4 class="fd-sub-title">管控AI辅助牛刀小试系列</h4>
+                    <p class="fd-text">进展描述示例文本，可以在这里填写具体的进展情况。</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 云原生引擎 -->
+              <div class="card fd-card">
+                <div class="card-content fd-card-content">
+                  <div class="fd-card-header">
+                    <h3 class="fd-card-title">云原生引擎</h3>
+                  </div>
+                  <div class="fd-sub-section">
+                    <h4 class="fd-sub-title">子专项示例 1</h4>
+                    <p class="fd-text">进展描述示例文本，可以在这里填写具体的进展情况。</p>
+                  </div>
+                  <div class="fd-sub-section">
+                    <h4 class="fd-sub-title">子专项示例 2</h4>
+                    <p class="fd-text">进展描述示例文本，可以在这里填写具体的进展情况。</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 测试 -->
+              <div class="card fd-card">
+                <div class="card-content fd-card-content">
+                  <div class="fd-card-header">
+                    <h3 class="fd-card-title">测试</h3>
+                  </div>
+                  <div class="fd-sub-section">
+                    <h4 class="fd-sub-title">触电行动</h4>
+                    <p class="fd-text">进展描述示例文本，可以在这里填写具体的进展情况。</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 架构师 -->
+              <div class="card fd-card">
+                <div class="card-content fd-card-content">
+                  <div class="fd-card-header">
+                    <h3 class="fd-card-title">架构师</h3>
+                  </div>
+                  <div class="fd-sub-section">
+                    <h4 class="fd-sub-title">管控AI辅助牛刀小试系列</h4>
+                    <p class="fd-text">进展描述示例文本，可以在这里填写具体的进展情况。</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 维护 -->
+              <div class="card fd-card">
+                <div class="card-content fd-card-content">
+                  <div class="fd-card-header">
+                    <h3 class="fd-card-title">维护</h3>
+                  </div>
+                  <div class="fd-sub-section">
+                    <h4 class="fd-sub-title">管控AI辅助牛刀小试系列</h4>
+                    <p class="fd-text">进展描述示例文本，可以在这里填写具体的进展情况。</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
 
             <!-- Other Sections -->
             <section v-else :id="type" class="content-section fade-in-up" :style="{ animationDelay: `${Math.random() * 0.5}s` }">
@@ -373,8 +534,54 @@
                 </div>
               </div>
               
-              <div v-if="type === 'industryNews'" class="under-construction">
-                <p>建设中</p>
+              <div v-if="type === 'industryNews'">
+                <div class="card-grid industry-news-grid">
+                  <a href="https://x.com/GoogleCloudTech/status/2033953579824758855" target="_blank" rel="noopener noreferrer" class="card case-card clickable-card news-card">
+                    <div class="card-image">
+                      <img src="https://pbs.twimg.com/media/HDoDJqGXAAg3-F-?format=jpg&name=medium" alt="5 Agent Skill design patterns every ADK developer should know">
+                    </div>
+                    <div class="card-content">
+                      <h3 class="card-title">5 Agent Skill design patterns every ADK developer should know</h3>
+                      <p class="news-subtitle">谷歌提出5种skill的设计模式和高阶编写技巧</p>
+                    </div>
+                  </a>
+                  <a href="https://x.com/GoogleCloudTech/status/2033953579824758855" target="_blank" rel="noopener noreferrer" class="card case-card clickable-card news-card">
+                    <div class="card-image">
+                      <img src="https://pbs.twimg.com/media/HDoDJqGXAAg3-F-?format=jpg&name=medium" alt="5 Agent Skill design patterns every ADK developer should know">
+                    </div>
+                    <div class="card-content">
+                      <h3 class="card-title">5 Agent Skill design patterns every ADK developer should know</h3>
+                      <p class="news-subtitle">谷歌提出5种skill的设计模式和高阶编写技巧</p>
+                    </div>
+                  </a>
+                  <a href="https://x.com/GoogleCloudTech/status/2033953579824758855" target="_blank" rel="noopener noreferrer" class="card case-card clickable-card news-card">
+                    <div class="card-image">
+                      <img src="https://pbs.twimg.com/media/HDoDJqGXAAg3-F-?format=jpg&name=medium" alt="5 Agent Skill design patterns every ADK developer should know">
+                    </div>
+                    <div class="card-content">
+                      <h3 class="card-title">5 Agent Skill design patterns every ADK developer should know</h3>
+                      <p class="news-subtitle">谷歌提出5种skill的设计模式和高阶编写技巧</p>
+                    </div>
+                  </a>
+                  <a href="https://x.com/GoogleCloudTech/status/2033953579824758855" target="_blank" rel="noopener noreferrer" class="card case-card clickable-card news-card">
+                    <div class="card-image">
+                      <img src="https://pbs.twimg.com/media/HDoDJqGXAAg3-F-?format=jpg&name=medium" alt="5 Agent Skill design patterns every ADK developer should know">
+                    </div>
+                    <div class="card-content">
+                      <h3 class="card-title">5 Agent Skill design patterns every ADK developer should know</h3>
+                      <p class="news-subtitle">谷歌提出5种skill的设计模式和高阶编写技巧</p>
+                    </div>
+                  </a>
+                  <a href="https://x.com/GoogleCloudTech/status/2033953579824758855" target="_blank" rel="noopener noreferrer" class="card case-card clickable-card news-card">
+                    <div class="card-image">
+                      <img src="https://pbs.twimg.com/media/HDoDJqGXAAg3-F-?format=jpg&name=medium" alt="5 Agent Skill design patterns every ADK developer should know">
+                    </div>
+                    <div class="card-content">
+                      <h3 class="card-title">5 Agent Skill design patterns every ADK developer should know</h3>
+                      <p class="news-subtitle">谷歌提出5种skill的设计模式和高阶编写技巧</p>
+                    </div>
+                  </a>
+                </div>
               </div>
               <div v-else class="card-grid">
                 <div v-for="item in items" :key="item.id" class="card">
@@ -527,16 +734,17 @@ const handleScroll = () => {
   isScrolled.value = window.scrollY > window.innerHeight * 0.5
 }
 
-const formatTitle = (key) => {
-  const titles = {
-    excellentCases: '优秀案例',
-    fdGroup: 'FD小组',
-    blueZoneStrategy: '蓝区战略',
-    serviceDomainSpecial: '服务域专项',
-    industryNews: '业界资讯'
-  }
-  return titles[key] || key
-}
+    const formatTitle = (key) => {
+      const titles = {
+        excellentCases: '优秀案例',
+        fdGroup: 'FD小组',
+        blueZoneStrategy: '蓝区战略',
+        serviceDomainSpecial: '服务域专项',
+        capacityBuilding: '能力构建',
+        industryNews: '业界资讯'
+      }
+      return titles[key] || key
+    }
 
 const truncate = (str, n) => {
   return (str.length > n) ? str.substr(0, n-1) + '...' : str
@@ -548,19 +756,21 @@ const fetchAllContentData = async () => {
   await new Promise(resolve => setTimeout(resolve, 800))
   
   try {
-    const [
-      excellentCases,
-      fdGroup,
-      blueZoneStrategy,
-      serviceDomainSpecial,
-      industryNews
-    ] = await Promise.all([
-      fetchExcellentCases(),
-      fetchFdGroup(),
-      fetchBlueZoneStrategy(),
-      fetchServiceDomainSpecial(),
-      fetchIndustryNews()
-    ])
+        const [
+          excellentCases,
+          fdGroup,
+          blueZoneStrategy,
+          serviceDomainSpecial,
+          capacityBuilding,
+          industryNews
+        ] = await Promise.all([
+          fetchExcellentCases(),
+          fetchFdGroup(),
+          fetchBlueZoneStrategy(),
+          fetchServiceDomainSpecial(),
+          fetchServiceDomainSpecial(), // Use same data for capacityBuilding as requested
+          fetchIndustryNews()
+        ])
 
     try {
       const vData = await fetchVisitors()
@@ -571,13 +781,14 @@ const fetchAllContentData = async () => {
       // ignore visitor fetch error
     }
 
-    content.value = {
-      excellentCases: excellentCases.items,
-      fdGroup: fdGroup.items,
-      blueZoneStrategy: blueZoneStrategy.items,
-      serviceDomainSpecial: serviceDomainSpecial.items,
-      industryNews: industryNews.items
-    }
+        content.value = {
+          excellentCases: excellentCases.items,
+          fdGroup: fdGroup.items,
+          blueZoneStrategy: blueZoneStrategy.items,
+          serviceDomainSpecial: serviceDomainSpecial.items,
+          capacityBuilding: capacityBuilding.items,
+          industryNews: industryNews.items
+        }
   } catch (error) {
     console.error('Failed to fetch content:', error)
     if (window.$toast) {
@@ -927,14 +1138,22 @@ onUnmounted(() => {
   grid-template-columns: repeat(3, 1fr);
 }
 
+.card-grid.industry-news-grid {
+  grid-template-columns: repeat(5, 1fr);
+}
+
 @media (max-width: 1200px) {
   .card-grid.single-card-grid {
     grid-template-columns: repeat(2, 1fr);
   }
+  .card-grid.industry-news-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 @media (max-width: 768px) {
-  .card-grid.single-card-grid {
+  .card-grid.single-card-grid,
+  .card-grid.industry-news-grid {
     grid-template-columns: 1fr;
   }
 }
@@ -1101,6 +1320,27 @@ onUnmounted(() => {
   width: 100%;
   height: 250px; /* Occupies roughly half of a typical card height */
   overflow: hidden;
+}
+
+.news-card .card-image {
+  height: 120px;
+}
+
+.news-card .card-content {
+  padding: 16px;
+}
+
+.news-card .card-title {
+  font-size: 16px;
+  margin-bottom: 8px;
+  line-height: 1.4;
+}
+
+.news-subtitle {
+  font-size: 16px;
+  color: #666;
+  margin: 0;
+  line-height: 1.5;
 }
 
 .card-image img {
