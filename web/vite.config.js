@@ -11,10 +11,6 @@ export default defineConfig({
       '/api': {
         target: 'http://localhost:8000',
         changeOrigin: true
-      },
-      '/w3-auth': {
-        target: 'http://localhost:8000',
-        changeOrigin: true
       }
     }
   }
