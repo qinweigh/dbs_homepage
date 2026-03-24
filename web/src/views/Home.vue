@@ -881,7 +881,8 @@ onUnmounted(() => {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
   padding: 0 40px;
 }
 
@@ -949,7 +950,7 @@ onUnmounted(() => {
 
 /* Hero Section */
 .hero {
-  min-height: 60vh;
+  min-height: 48vh; /* 80% of 60vh */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -982,7 +983,8 @@ onUnmounted(() => {
 .hero-container {
   position: relative;
   z-index: 2;
-  padding-top: 80px;
+  padding-top: 120px; /* Increased offset to move text further down */
+  width: 100%;
 }
 
 .hero-content {
