@@ -731,7 +731,7 @@ const filteredCases = computed(() => {
 })
 
 const handleScroll = () => {
-  isScrolled.value = window.scrollY > window.innerHeight * 0.5
+  isScrolled.value = window.scrollY > window.innerHeight * 0.43 // Adjusted to match the 51vh hero image height
 }
 
     const formatTitle = (key) => {
@@ -866,7 +866,7 @@ onUnmounted(() => {
   backdrop-filter: blur(12px);
   background: rgba(255, 255, 255, 0.05);
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  transition: background-color 0.3s ease, border-bottom-color 0.3s ease;
+  transition: background-color 0.3s ease, border-bottom-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .navbar.scrolled {
@@ -950,7 +950,7 @@ onUnmounted(() => {
 
 /* Hero Section */
 .hero {
-  min-height: 48vh; /* 80% of 60vh */
+  min-height: 51vh; /* 85% of 60vh */
   display: flex;
   align-items: center;
   justify-content: center;
