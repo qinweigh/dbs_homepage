@@ -881,9 +881,9 @@ onUnmounted(() => {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 1200px;
+  max-width: 85%;
   margin: 0 auto;
-  padding: 0 40px;
+  padding: 0 40px 0 80px; /* Increased left padding to shift everything right */
 }
 
 .brand {
