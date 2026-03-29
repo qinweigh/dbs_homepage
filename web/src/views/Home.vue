@@ -15,7 +15,7 @@
           <div class="nav-links">
             <a href="#excellentCases" class="nav-item" @click.prevent="scrollToSection('excellentCases')">优秀案例</a>
             <a href="#fdGroup" class="nav-item" @click.prevent="scrollToSection('fdGroup')">FD小组</a>
-            <a href="#blueZoneStrategy" class="nav-item" @click.prevent="scrollToSection('blueZoneStrategy')">蓝区战略</a>
+            <a href="#blueZoneStrategy" class="nav-item" @click.prevent="scrollToSection('blueZoneStrategy')">蓝绿协同</a>
             <a href="#serviceDomainSpecial" class="nav-item" @click.prevent="scrollToSection('serviceDomainSpecial')">服务域专项</a>
             <a href="#capacityBuilding" class="nav-item" @click.prevent="scrollToSection('capacityBuilding')">能力构建</a>
             <a href="#industryNews" class="nav-item" @click.prevent="scrollToSection('industryNews')">业界资讯</a>
@@ -78,12 +78,12 @@
               </div>
               
               <div class="card-grid fd-grid">
-                <div class="card fd-card" v-for="group in ['TaurusDB和RDS', '管控和迁移', 'GeminiDB']" :key="group">
-                  <div class="card-content fd-card-content">
-                    <div class="fd-card-header">
-                      <img v-if="group === '管控和迁移'" src="https://res-static.hc-cdn.cn/cloudbu-site/china/zh-cn/product_gaussdb_banner_icon.png" alt="GaussDB Icon" class="fd-group-icon">
-                      <img v-if="group === 'TaurusDB和RDS'" src="https://res-static.hc-cdn.cn/cloudbu-site/intl/zh-cn/MySQL/TaurusDB_icon.svg" alt="TaurusDB Icon" class="fd-group-icon">
-                      <img v-if="group === 'GeminiDB'" src="https://res-static.hc-cdn.cn/cloudbu-site/china/zh-cn/202104DBS/geminidb.png" alt="GeminiDB Icon" class="fd-group-icon">
+              <div class="card fd-card" v-for="group in ['TaurusDB', '管控和迁移', 'GeminiDB']" :key="group">
+                <div class="card-content fd-card-content">
+                  <div class="fd-card-header">
+                    <img v-if="group === '管控和迁移'" src="https://res-static.hc-cdn.cn/cloudbu-site/china/zh-cn/product_gaussdb_banner_icon.png" alt="GaussDB Icon" class="fd-group-icon">
+                    <img v-if="group === 'TaurusDB'" src="https://res-static.hc-cdn.cn/cloudbu-site/intl/zh-cn/MySQL/TaurusDB_icon.svg" alt="TaurusDB Icon" class="fd-group-icon">
+                    <img v-if="group === 'GeminiDB'" src="https://res-static.hc-cdn.cn/cloudbu-site/china/zh-cn/202104DBS/geminidb.png" alt="GeminiDB Icon" class="fd-group-icon">
                       <h3 class="fd-card-title">{{ group }}</h3>
                     </div>
                     
@@ -142,7 +142,7 @@
                       <td></td>
                     </tr>
                     <tr>
-                      <td rowspan="3" class="domain-cell">TaurusDB和RDS</td>
+                      <td rowspan="3" class="domain-cell">TaurusDB</td>
                       <td>管控</td>
                       <td></td>
                       <td></td>
@@ -263,11 +263,11 @@
                 </div>
               </div>
 
-              <!-- TaurusDB和RDS -->
+              <!-- TaurusDB -->
               <div class="card fd-card">
                 <div class="card-content fd-card-content">
                   <div class="fd-card-header">
-                    <h3 class="fd-card-title">TaurusDB和RDS</h3>
+                    <h3 class="fd-card-title">TaurusDB</h3>
                   </div>
                   <div class="fd-sub-section">
                     <h4 class="fd-sub-title">Taurus8041升级</h4>
@@ -405,11 +405,11 @@
                 </div>
               </div>
 
-              <!-- TaurusDB和RDS -->
+              <!-- TaurusDB -->
               <div class="card fd-card">
                 <div class="card-content fd-card-content">
                   <div class="fd-card-header">
-                    <h3 class="fd-card-title">TaurusDB和RDS</h3>
+                    <h3 class="fd-card-title">TaurusDB</h3>
                   </div>
                   <div class="fd-sub-section">
                     <h4 class="fd-sub-title">Taurus8041升级</h4>
@@ -696,7 +696,7 @@ const showAllCasesModal = ref(false)
 const selectedServiceDomain = ref('全部')
 const selectedToolType = ref('全部')
 
-const serviceDomains = ["全部", "GaussDB", "TaurusDB和RDS", "GeminiDB", "管控和迁移", "云原生引擎", "测试", "架构", "运维"]
+const serviceDomains = ["全部", "GaussDB", "TaurusDB", "GeminiDB", "管控和迁移", "云原生引擎", "测试", "架构", "运维"]
 const toolTypes = ["全部", "Code Agent", "Relay Agent", "MCP", "Skills", "CodeWiki", "CodeBase", "CodeInsight", "独立Agent"]
 
 // Generate mock data for the modal
@@ -738,7 +738,7 @@ const handleScroll = () => {
       const titles = {
         excellentCases: '优秀案例',
         fdGroup: 'FD小组',
-        blueZoneStrategy: '蓝区战略',
+        blueZoneStrategy: '蓝绿协同',
         serviceDomainSpecial: '服务域专项',
         capacityBuilding: '能力构建',
         industryNews: '业界资讯'
